@@ -70,7 +70,7 @@ class TestCalibrationArchiveBytes(unittest.TestCase):
                 calibrator.yaml = lambda *args: 'camera_name: test\n'
                 calibrator.ost = lambda: 'calibration\n'
                 if cls is StereoCalibrator:
-                    setattr(calibrator, "l", object())
+                    setattr(calibrator, 'l', object())
                     calibrator.r = object()
                 buffer = BytesIO()
                 with patch(
